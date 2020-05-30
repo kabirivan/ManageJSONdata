@@ -5,12 +5,15 @@ Created on Fri May 29 19:47:18 2020
 
 @author: Xavier Aguas
 """
+
 import json
-
-
 
 with open('data.json') as access_json:
     read_content = json.load(access_json)
+
+print(read_content)
+print('\n')  
+
     
 question_access = read_content['results']     
 
@@ -28,14 +31,14 @@ replies_access = question_data['replies']
 print(replies_access)   
     
 
-def get_user_name():
-    question_access = read_content['results']
-    for question_data in question_access:
-        for replies_data in replies_access:
-            user_name = replies_data['user']['display_name']
-            print(user_name)
+# def get_user_name():
+#     question_access = read_content['results']
+#     for question_data in question_access:
+#         for replies_data in replies_access:
+#             user_name = replies_data['user']['display_name']
+#             print(user_name)
             
             
             
             
-get_user_name()            
+# get_user_name()            
